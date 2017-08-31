@@ -1,0 +1,22 @@
+{% macro render_field(field) %}
+    <div class="field">
+        {{ field(placeholder=field.label.text) }}
+        {% if field.errors %}
+            {% for error in field.errors %}
+                <div class="notification error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro render_flashed_messages() %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="notification error top-notification">
+                    {{message}}
+                </p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endmacro %}

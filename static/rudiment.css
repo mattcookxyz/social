@@ -1,0 +1,198 @@
+/* developed by matt cook - 2017 - mattcook.xyz */
+/* https://www.github.com/mattcookxyz/rudiment */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700');
+
+/* NORMALIZE */
+
+body, html, div, header, footer, main, article, section, h1, h2, h3, ul, ol, li, p, a, img, pre, li, input, form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	color: black;
+	box-sizing: border-box;
+    font-size: 100%;
+}
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+h3 { font-size: 150%; }
+h1, h2, h3 { padding: 0 0 0.6em; }
+
+header h1, header h2, header h3 { padding-top: 1em; }
+
+a { text-decoration: none; color: #c63f3f; }
+a:hover { text-decoration: underline; }
+
+img {
+    width: 100%;
+}
+
+/* TEXT */
+
+h1, h2, h3, p, a, input, li, div, pre { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3 { font-weight: 600; }
+p, a, input, li, button { font-weight: 400; font-size: 100%; }
+p { line-height: 1.7; }
+
+strong { font-weight: 700; }
+em { font-weight: 400i; }
+
+.center { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-justify { text-align: justify; }
+
+.text-light { font-weight: 400; }
+.text-medium { font-weight: 600; }
+.text-bold { font-weight: 700; }
+
+.button {
+    text-align: center;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0px;
+    display: inline-block;
+    color: white;
+    background-color: black;
+}
+
+.button:hover {
+    opacity: 0.4;
+    text-decoration: none;
+}
+
+.button:hover { transition: 100ms; cursor: pointer; }
+.button:active { background-color: #F0F0F0; transition: 50ms; }
+
+.code {
+    width: 100%;
+    border-radius: 0px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    text-align: left;
+}
+
+/* MISC */
+
+.nav {
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 0px;
+}
+
+.nav p, .nav a {
+    color: white;
+}
+
+.nav a:first-of-type {
+    margin-left: 8px;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    line-height: 1.7;
+    text-align: left;
+}
+
+li ul, li ol {
+    margin-left: 3em;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 8px 15px;
+    border: #BBB 1px solid;
+    border-radius: 0px;
+    display: inline-block;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* GRID */
+
+body {
+	width: 100%;
+}
+
+footer {
+    padding-bottom: 20px;
+}
+
+.container {
+	width: 960px;
+    margin: auto;
+}
+
+.pad-top-0 { margin-top: 0px; }
+.pad-top-5 { margin-top: 5px; }
+.pad-top-10 { margin-top: 10px; }
+.pad-top-15 { margin-top: 15px; }
+.pad-top-20 { margin-top: 20px; }
+.pad-top-25 { margin-top: 25px; }
+
+.pad-bottom-0 { margin-bottom: 0px; }
+.pad-bottom-5 { margin-bottom: 20px; }
+.pad-bottom-10 { margin-bottom: 10px; }
+.pad-bottom-15 { margin-bottom: 15px; }
+.pad-bottom-20 { margin-bottom: 20px; }
+.pad-bottom-25 { margin-bottom: 25px; }
+
+.row::after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.row [ class*='col-' ] {
+	float: left;
+    padding: 10px;
+    display: inline-block;
+}
+
+.col-1 { width: 8.333%; }
+.col-2 { width: 16.666%; }
+.col-3 { width: 24.999%; }
+.col-4 { width: 33.333%; }
+.col-5 { width: 41.666%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.333%; }
+.col-8 { width: 66.666%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.333%; }
+.col-11 { width: 91.666%; }
+.col-12 { width: 100%; }
+
+@media screen and ( max-width: 959px ) {
+    .container { width: 100%; padding: 0px 20px; }
+}
+
+@media screen and ( max-width: 800px ) {
+    html { font-size: 80%; }
+    .col-1 { width: 16.666%; }
+    .col-2 { width: 50%; }
+    .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { width: 100%; margin: auto; }
+}
+
+@media screen and ( max-width: 600px ) {
+    .col-1 { width: 33.333%; }
+    .col-2 { width: 50%; }
+    .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { width: 100%; margin: auto; }
+}
+
+@media screen and ( max-width: 400px ) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { width: 100%; margin: auto; }
+}

@@ -1,0 +1,36 @@
+/*************************** GENERAL ***************************/
+
+html {
+    font-size: 18px;
+}
+
+
+/*************************** HEADER ***************************/
+
+header {
+    margin: 40px auto 20px;
+}
+
+
+/*************************** BODY ***************************/
+
+.field {
+    margin-bottom: 10px;
+}
+
+.notification {
+    padding: 10px;
+    background-color: lightgray;
+    margin: 10px auto;
+}
+
+.top-notification {
+    margin-bottom: 30px;
+}
+
+
+/*************************** FOOTER ***************************/
+
+footer {
+    margin: 40px auto;
+}
