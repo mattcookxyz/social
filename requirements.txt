@@ -12,5 +12,5 @@ MarkupSafe==1.0
 peewee==2.10.1
 pycparser==2.18
 six==1.10.0
-Werkzeug==0.12.2
+Werkzeug==0.15.3
 WTForms==2.1
